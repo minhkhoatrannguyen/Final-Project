@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>MavenProject</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>SeleniumFinal</artifactId>
+	<packaging>jar</packaging>
+
+	<!-- change these to the appropriate values -->
+	<name>My Apex Application Configuration</name>
+	<description>My Apex Application Configuration Description</description>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<properties>
+		<apex.apppackage.groupid>MavenProject</apex.apppackage.groupid>
+		<apex.apppackage.name>myapexapp</apex.apppackage.name>
+		<apex.apppackage.minversion>1.0.0</apex.apppackage.minversion>
+		<apex.apppackage.maxversion>1.9999.9999</apex.apppackage.maxversion>
+		<apex.appconf.classpath>classpath/*</apex.appconf.classpath>
+		<apex.appconf.files>files/*</apex.appconf.files>
+		<apex.appconf.app>app/*</apex.appconf.app>
+	</properties>
+	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.10.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>Auto</groupId>
+			<artifactId>CodeStarTraining</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.7</source>
+					<target>1.7</target>
+					<debug>true</debug>
+					<optimize>false</optimize>
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
