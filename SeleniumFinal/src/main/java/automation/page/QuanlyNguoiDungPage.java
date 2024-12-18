@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import automation.common.CommonBase;
 
-public class AddNewUserPage extends CommonBase {
+public class QuanlyNguoiDungPage extends CommonBase {
 
 	private WebDriver driver;
 
@@ -22,7 +22,7 @@ public class AddNewUserPage extends CommonBase {
 	@FindBy(name = "workarea_id")
 	WebElement dropdownListKhuLamViec;
 
-	public AddNewUserPage(WebDriver driver) {
+	public QuanlyNguoiDungPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -53,11 +53,12 @@ public class AddNewUserPage extends CommonBase {
 	}
 	
 	public void goToTheLastPage() {
-		List<WebElement> pageNumbers = driver.findElements(By.xpath("//li[@aria-label='« Previous']/parent::ul")); 
-        // Modify the XPath based on your page's HTML structure
+		scrollToElement(By.xpath("//a[contains(text(),'›')]"));
+		List<WebElement> pageNumbers = getElementSPresentDOM(By.xpath("//div[@class='display-pagi']//a[contains(@class,'page-link')]")); 
+        // Adjust XPath based on your HTML structure
 
-        // 2. Find the last page number dynamically
-        int lastPageNumber = 1; // Default to page 1
+        // Find the last page number dynamically
+        int lastPageNumber = 1; // Default to the first page
         for (WebElement page : pageNumbers) {
             String pageText = page.getText();
             try {
@@ -66,15 +67,41 @@ public class AddNewUserPage extends CommonBase {
                     lastPageNumber = pageNum; // Update to the largest page number
                 }
             } catch (NumberFormatException e) {
-                // Ignore non-numeric values (e.g., "Next", "Previous" buttons)
+                // Ignore non-numeric values like "..." or "<", ">"
             }
         }
-        // 3. Click on the last page number
+
+        // Click on the last page number
         for (WebElement page : pageNumbers) {
             if (page.getText().equals(String.valueOf(lastPageNumber))) {
+            	pause(1000);
                 page.click(); // Click the last page number
                 break;
             }
         }
+	}
+	
+	public void clickActivate() {
+		List<WebElement> buttons = getElementSPresentDOM(By.xpath("//a[contains(text(),'Kích hoạt')]"));
+		if (!buttons.isEmpty()) {
+            // Click the first button
+            buttons.get(0).click();
+		}
+	}
+	
+	public void clickDeactivate() {
+		List<WebElement> buttons = getElementSPresentDOM(By.xpath("//a[contains(text(),'Khóa tài khoản')]"));
+		if (!buttons.isEmpty()) {
+            // Click the first button
+            buttons.get(0).click();
+		}
+	}
+	
+	public void clickLamMoiMatKhau() {
+		List<WebElement> buttons = getElementSPresentDOM(By.xpath("//a[contains(text(),'Làm mới mật khẩu')]"));
+		if (!buttons.isEmpty()) {
+            // Click the first button
+            buttons.get(0).click();
+		}
 	}
 }
