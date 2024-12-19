@@ -53,31 +53,34 @@ public class QuanlyNguoiDungPage extends CommonBase {
 	}
 	
 	public void goToTheLastPage() {
-		scrollToElement(By.xpath("//a[contains(text(),'›')]"));
-		List<WebElement> pageNumbers = getElementSPresentDOM(By.xpath("//div[@class='display-pagi']//a[contains(@class,'page-link')]")); 
-        // Adjust XPath based on your HTML structure
+		try {
+            // Locate all page number elements (modify the locator to match your pagination)
+            List<WebElement> pageNumbers = driver.findElements(By.xpath("//ul[@class='pagination']//a[last()]"));
 
-        // Find the last page number dynamically
-        int lastPageNumber = 1; // Default to the first page
-        for (WebElement page : pageNumbers) {
-            String pageText = page.getText();
-            try {
-                int pageNum = Integer.parseInt(pageText); // Convert text to number
-                if (pageNum > lastPageNumber) {
-                    lastPageNumber = pageNum; // Update to the largest page number
+            // Find the last page number dynamically
+            int lastPageNumber = 1; // Default to the first page
+            for (WebElement page : pageNumbers) {
+                String pageText = page.getText();
+                try {
+                    int pageNum = Integer.parseInt(pageText);
+                    if (pageNum > lastPageNumber) {
+                        lastPageNumber = pageNum;
+                    }
+                } catch (NumberFormatException e) {
+                    // Ignore non-numeric page links
                 }
-            } catch (NumberFormatException e) {
-                // Ignore non-numeric values like "..." or "<", ">"
             }
-        }
+            // Click on the last page link
+            for (WebElement page : pageNumbers) {
+                if (page.getText().equals(String.valueOf(lastPageNumber))) {
+                	scrollToBottom();
+                    page.click();
+                    break;
+                }
+            }
 
-        // Click on the last page number
-        for (WebElement page : pageNumbers) {
-            if (page.getText().equals(String.valueOf(lastPageNumber))) {
-            	pause(1000);
-                page.click(); // Click the last page number
-                break;
-            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 	}
 	
@@ -103,5 +106,23 @@ public class QuanlyNguoiDungPage extends CommonBase {
             // Click the first button
             buttons.get(0).click();
 		}
+	}
+	
+	public void editUserInformation(String hoten, String sdt, String phongBan, String chucDanh, String KLV, String userCode) {
+		List<WebElement> buttons = getElementSPresentDOM(By.xpath("//a[contains(text(),'Sửa')]"));
+		if (!buttons.isEmpty()) {
+            // Click the first button
+            buttons.get(0).click();
+		}
+		type(By.name("username"), hoten);
+		type(By.name("phone_number"), sdt);
+		Select phongBanDropdownList = new Select(dropdownListPhongBan);
+		phongBanDropdownList.selectByValue(phongBan);
+		Select chucDanhDropdownList = new Select(dropdownListChucDanh);
+		chucDanhDropdownList.selectByValue(chucDanh);
+		Select khuLamViecDropdownList = new Select(dropdownListKhuLamViec);
+		khuLamViecDropdownList.selectByValue(KLV);
+		type(By.name("code_user"), userCode);
+		click(By.xpath("//button[contains(text(),'Lưu')]"));
 	}
 }

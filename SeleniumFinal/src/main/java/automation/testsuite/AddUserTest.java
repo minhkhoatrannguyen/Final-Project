@@ -39,13 +39,7 @@ public class AddUserTest extends CommonBase {
 		quanLyNguoiDung.clickConfirmButtonToAdd();
 		assertTrue(isElementPresent(By.xpath("//div[contains(text(),'Thêm mới người dùng thành công')]")));
 		quanLyNguoiDung.searchUSer(hoten);
-		if (isElementPresent(By.xpath("//li[@aria-label='« Previous']/parent::ul"))) {
-			quanLyNguoiDung.goToTheLastPage();
-			//assertTrue(isElementPresent(By.xpath("//td[text()='" + email + "']/parent::tr")));
-			
-		} else {
-		//assertTrue(isElementPresent(By.xpath("//td[text()='" + email + "']/parent::tr")));
-		}
+		assertTrue(isElementPresent(By.xpath("//td[text()='" + email + "']/parent::tr")));
 	}
 
 	@Test(priority = 2)
@@ -77,11 +71,11 @@ public class AddUserTest extends CommonBase {
 		assertTrue(getElementPresentDOM(By.xpath("//span[contains(text(),'Email đã tồn tại')]")).isDisplayed());
 		assertTrue(getElementPresentDOM(By.xpath("//span[contains(text(),'Mã người dùng đã tồn tại')]")).isDisplayed());
 		}
-	}
 
-//	@AfterMethod
-//	public void closeWebPage() {
-//		driver.close();
-//	}
+	@AfterMethod
+	public void closeWebPage() {
+		driver.close();
+	}
+}
 
 

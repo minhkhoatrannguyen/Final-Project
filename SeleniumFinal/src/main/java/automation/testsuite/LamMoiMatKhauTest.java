@@ -25,7 +25,7 @@ public class LamMoiMatKhauTest extends CommonBase {
 	@Test(priority = 1)
 	public void TC_LamMoiMatKhau() {
 		loginPage.loginFunction(CodeStar_Account.email, CodeStar_Account.password);
-		quanLyNguoiDung.searchUSer(CodeStar_Account.hoTen);
+		quanLyNguoiDung.searchUSer(CodeStar_Account.SearchedHoTen);
 		quanLyNguoiDung.clickLamMoiMatKhau();
 		driver.switchTo().alert().accept();
 		assertTrue(isElementPresent(By.xpath("//div[contains(text(),'Làm mới mật khẩu thành công!!!')]")));

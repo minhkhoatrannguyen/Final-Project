@@ -154,6 +154,16 @@ public class CommonBase {
 		WebElement element = getElementPresentDOM(locator);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
+	
+	public void scrollToBottom() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        try {
+            Thread.sleep(2000); // Wait for 2 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+	}
 
 	public void click(By locator) {
 		WebElement element = getElementPresentDOM(locator);
