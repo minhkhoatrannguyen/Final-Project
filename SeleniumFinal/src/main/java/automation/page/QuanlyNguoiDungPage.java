@@ -47,6 +47,10 @@ public class QuanlyNguoiDungPage extends CommonBase {
 		click(By.xpath("//button[@form='add_user']"));
 	}
 	
+	public void clickConfirmButtonToEdit() {
+		click(By.xpath("//button[contains(text(),'Chỉnh sửa')]"));
+	}
+	
 	public void searchUSer(String hoten) {
 		type(By.xpath("//input[@placeholder='Nhập từ khóa cần tìm kiếm']"), hoten);
 		click(By.xpath("//button[contains(text(),'Tìm kiếm')]"));
@@ -116,6 +120,12 @@ public class QuanlyNguoiDungPage extends CommonBase {
 		}
 		type(By.name("username"), hoten);
 		type(By.name("phone_number"), sdt);
+		if ((getElementPresentDOM(By.xpath("//input[@value='active']"))).isSelected()) {
+            click(By.xpath("//input[@value='deactive']"));
+            System.out.println("Switched to: Hoạt động");
+        } else {
+        	click(By.xpath("//input[@value='active']"));
+        }
 		Select phongBanDropdownList = new Select(dropdownListPhongBan);
 		phongBanDropdownList.selectByValue(phongBan);
 		Select chucDanhDropdownList = new Select(dropdownListChucDanh);
@@ -124,5 +134,37 @@ public class QuanlyNguoiDungPage extends CommonBase {
 		khuLamViecDropdownList.selectByValue(KLV);
 		type(By.name("code_user"), userCode);
 		click(By.xpath("//button[contains(text(),'Lưu')]"));
+	}
+	
+	public void viewUserInformation() {
+		List<WebElement> buttons = getElementSPresentDOM(By.xpath("//a[contains(text(),'Xem')]"));
+		if (!buttons.isEmpty()) {
+            // Click the first button
+            buttons.get(0).click();
+		}
+	}
+	
+	public String getTextOfEditedPhongBan() {
+		Select dropdown = new Select(getElementPresentDOM(By.id("select_department_id")));
+
+        // Get the selected option
+        WebElement selectedOption = dropdown.getFirstSelectedOption();
+        return selectedOption.getText();
+	}
+	
+	public String getTextOfEditedChucDanh() {
+		Select dropdown = new Select(getElementPresentDOM(By.id("select_role_id")));
+
+        // Get the selected option
+        WebElement selectedOption = dropdown.getFirstSelectedOption();
+        return selectedOption.getText();
+	}
+	
+	public String getTextOfEditedKLV() {
+		Select dropdown = new Select(getElementPresentDOM(By.id("select_workarea_id")));
+
+        // Get the selected option
+        WebElement selectedOption = dropdown.getFirstSelectedOption();
+        return selectedOption.getText();
 	}
 }

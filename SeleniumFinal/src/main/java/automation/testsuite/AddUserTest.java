@@ -66,7 +66,7 @@ public class AddUserTest extends CommonBase {
 	@Test(priority = 4)
 	public void TC4_FailToAddNewUserByInputExistedEmailUserCode() {
 		loginPage.loginFunction(CodeStar_Account.email, CodeStar_Account.password);
-		quanLyNguoiDung.AddNewUserFunction(hoten, "khoaminhtran1999@gmail.com", phoneNumber, phongBan, chucDanh, khuLamViec, "1707");
+		quanLyNguoiDung.AddNewUserFunction(hoten, "khoaminhtran1999@gmail.com", phoneNumber, phongBan, chucDanh, khuLamViec, "1000");
 		quanLyNguoiDung.clickConfirmButtonToAdd();
 		assertTrue(getElementPresentDOM(By.xpath("//span[contains(text(),'Email đã tồn tại')]")).isDisplayed());
 		assertTrue(getElementPresentDOM(By.xpath("//span[contains(text(),'Mã người dùng đã tồn tại')]")).isDisplayed());
