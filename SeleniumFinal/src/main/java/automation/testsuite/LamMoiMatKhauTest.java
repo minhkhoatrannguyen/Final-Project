@@ -35,6 +35,4 @@ public class LamMoiMatKhauTest extends CommonBase {
 	public void closeWebPage() {
 		driver.close();
 	}
-
-
 }

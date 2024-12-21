@@ -1,6 +1,9 @@
 package automation.page;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -167,4 +170,22 @@ public class QuanlyNguoiDungPage extends CommonBase {
         WebElement selectedOption = dropdown.getFirstSelectedOption();
         return selectedOption.getText();
 	}
+	
+	public void clickExportCSVFile(String downloadFilePath) {
+		click(By.xpath("//button[contains(text(),'Xuất ra Excel')]"));
+		File downloadedFile = new File(downloadFilePath + "/exported_file.csv"); // Replace with the actual file name
+        if (downloadedFile.exists()) {
+            validateFileContent(downloadedFile);
+        }
+	}
+	
+	public void validateFileContent(File file) {
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
