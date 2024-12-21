@@ -3,16 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.departments.DeleteDepartment">
+      <class name="automation.testsuite.qlklv.AddKVLV">
         <methods>
-          <include name="Login"/>
           <include name="closeWebPage"/>
-          <include name="XoaPhongBanDaThem"/>
-          <include name="openDepartmentManagement"/>
+          <include name="Login"/>
           <include name="openFireFox"/>
-          <include name="XemPhongBan001"/>
+          <include name="ThemkvLV002"/>
+          <include name="Themkvlv001"/>
+          <include name="openquanlykvlv"/>
+          <include name="XoaKVLVdathem"/>
         </methods>
-      </class> <!-- automation.testsuite.departments.DeleteDepartment -->
+      </class> <!-- automation.testsuite.qlklv.AddKVLV -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
