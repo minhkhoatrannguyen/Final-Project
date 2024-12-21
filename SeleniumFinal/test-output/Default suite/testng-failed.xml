@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.EditUserTest">
+      <class name="automation.testsuite.departments.DeleteDepartment">
         <methods>
+          <include name="Login"/>
+          <include name="closeWebPage"/>
+          <include name="XoaPhongBanDaThem"/>
+          <include name="openDepartmentManagement"/>
           <include name="openFireFox"/>
-          <include name="TC_EditSuccessfully"/>
+          <include name="XemPhongBan001"/>
         </methods>
-      </class> <!-- automation.testsuite.EditUserTest -->
+      </class> <!-- automation.testsuite.departments.DeleteDepartment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

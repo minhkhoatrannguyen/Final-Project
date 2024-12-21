@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-21T07:31:37 ICT" name="Default suite" finished-at="2024-12-21T07:31:44 ICT" duration-ms="7666">
+  <suite started-at="2024-12-21T16:30:52 ICT" name="Default suite" finished-at="2024-12-21T16:31:22 ICT" duration-ms="30389">
     <groups>
     </groups>
-    <test started-at="2024-12-21T07:31:37 ICT" name="Default test" finished-at="2024-12-21T07:31:44 ICT" duration-ms="7666">
-      <class name="automation.testsuite.EditUserTest">
-        <test-method is-config="true" signature="openFireFox()[pri:0, instance:automation.testsuite.EditUserTest@563f38c4]" started-at="2024-12-21T07:31:37 ICT" name="openFireFox" finished-at="2024-12-21T07:31:41 ICT" duration-ms="3986" status="PASS">
+    <test started-at="2024-12-21T16:30:52 ICT" name="Default test" finished-at="2024-12-21T16:31:22 ICT" duration-ms="30389">
+      <class name="automation.testsuite.departments.ViewDepartment">
+        <test-method is-config="true" signature="openFireFox()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:30:46 ICT" name="openFireFox" finished-at="2024-12-21T16:30:52 ICT" duration-ms="5676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openFireFox -->
-        <test-method signature="TC_EditSuccessfully()[pri:1, instance:automation.testsuite.EditUserTest@563f38c4]" started-at="2024-12-21T07:31:41 ICT" name="TC_EditSuccessfully" finished-at="2024-12-21T07:31:44 ICT" duration-ms="3654" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:30:52 ICT" name="Login" finished-at="2024-12-21T16:30:57 ICT" duration-ms="4737" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_EditSuccessfully -->
-      </class> <!-- automation.testsuite.EditUserTest -->
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="openDepartmentManagement()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:30:57 ICT" name="openDepartmentManagement" finished-at="2024-12-21T16:30:58 ICT" duration-ms="1289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDepartmentManagement -->
+        <test-method signature="XemPhongBan001()[pri:1, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:30:58 ICT" name="XemPhongBan001" finished-at="2024-12-21T16:30:59 ICT" duration-ms="742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XemPhongBan001 -->
+        <test-method is-config="true" signature="openDepartmentManagement()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:30:59 ICT" name="openDepartmentManagement" finished-at="2024-12-21T16:31:00 ICT" duration-ms="1270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDepartmentManagement -->
+        <test-method signature="XemPhongBan002()[pri:2, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:31:00 ICT" name="XemPhongBan002" finished-at="2024-12-21T16:31:01 ICT" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XemPhongBan002 -->
+        <test-method is-config="true" signature="openDepartmentManagement()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:31:01 ICT" name="openDepartmentManagement" finished-at="2024-12-21T16:31:02 ICT" duration-ms="1285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDepartmentManagement -->
+        <test-method signature="XemPhongBan003()[pri:3, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:31:02 ICT" name="XemPhongBan003" finished-at="2024-12-21T16:31:03 ICT" duration-ms="967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XemPhongBan003 -->
+        <test-method is-config="true" signature="XoaPhongBanDaThem()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:31:03 ICT" name="XoaPhongBanDaThem" finished-at="2024-12-21T16:31:22 ICT" duration-ms="19174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XoaPhongBanDaThem -->
+        <test-method is-config="true" signature="closeWebPage()[pri:0, instance:automation.testsuite.departments.ViewDepartment@117159c0]" started-at="2024-12-21T16:31:22 ICT" name="closeWebPage" finished-at="2024-12-21T16:31:23 ICT" duration-ms="849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWebPage -->
+      </class> <!-- automation.testsuite.departments.ViewDepartment -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

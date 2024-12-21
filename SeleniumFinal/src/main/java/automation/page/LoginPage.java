@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import automation.common.CommonBase;
-import automation.constant.CodeStar_Account;
+import automation.constant.CT_Department;
 
 public class LoginPage extends CommonBase {
 
