@@ -66,7 +66,8 @@ public class ViewKVLV extends CommonBase {
 	@AfterTest
 	public void XoaKVLVDaThem() {
 		quanlyKLV.OpenMenu();
-		quanlyKLV.DeleteKVLV("KVLV005");
+		quanlyKLV.DeleteKVLV("KVLV005"
+				+ "");
 	}
 
 	@AfterSuite

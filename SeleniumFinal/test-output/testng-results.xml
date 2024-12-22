@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-22T14:23:46 GMT+07:00" name="Default suite" finished-at="2024-12-22T14:24:39 GMT+07:00" duration-ms="52713">
+  <suite started-at="2024-12-22T15:37:24 GMT+07:00" name="Default suite" finished-at="2024-12-22T15:38:17 GMT+07:00" duration-ms="52965">
     <groups>
     </groups>
-    <test started-at="2024-12-22T14:23:46 GMT+07:00" name="Default test" finished-at="2024-12-22T14:24:39 GMT+07:00" duration-ms="52713">
-      <class name="automation.testsuite.qlklv.SearchKVLV">
-        <test-method is-config="true" signature="openFireFox()[pri:0, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:23:38 GMT+07:00" name="openFireFox" finished-at="2024-12-22T14:23:46 GMT+07:00" duration-ms="8338" status="PASS">
+    <test started-at="2024-12-22T15:37:24 GMT+07:00" name="Default test" finished-at="2024-12-22T15:38:17 GMT+07:00" duration-ms="52965">
+      <class name="automation.testsuite.qlklv.AddKVLV">
+        <test-method is-config="true" signature="openFireFox()[pri:0, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:37:13 GMT+07:00" name="openFireFox" finished-at="2024-12-22T15:37:24 GMT+07:00" duration-ms="10594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openFireFox -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:23:46 GMT+07:00" name="Login" finished-at="2024-12-22T14:23:48 GMT+07:00" duration-ms="2149" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:37:24 GMT+07:00" name="Login" finished-at="2024-12-22T15:37:27 GMT+07:00" duration-ms="2710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method is-config="true" signature="openquanlykvlv()[pri:0, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:23:48 GMT+07:00" name="openquanlykvlv" finished-at="2024-12-22T14:24:39 GMT+07:00" duration-ms="50475" status="FAIL">
+        <test-method is-config="true" signature="openquanlykvlv()[pri:0, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:37:27 GMT+07:00" name="openquanlykvlv" finished-at="2024-12-22T15:38:17 GMT+07:00" duration-ms="50014" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='test-system.crmstar.vn/work-space-management'] (tried for 50 second(s) with 500 milliseconds interval)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10100, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 46fb4665-96c1-4c87-b28d-ae3a9bfd906e]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15860, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68850b9c-8b24-44c4-b456-ad3ef6e63574]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='test-system.crmstar.vn/work-space-management'] (tried for 50 second(s) with 500 milliseconds interval)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10100, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 46fb4665-96c1-4c87-b28d-ae3a9bfd906e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15860, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68850b9c-8b24-44c4-b456-ad3ef6e63574
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
 at automation.common.CommonBase.getElementPresentDOM(CommonBase.java:102)
 at automation.common.CommonBase.click(CommonBase.java:169)
 at automation.page.QuanlyKLVPage.OpenMenu(QuanlyKLVPage.java:26)
-at automation.testsuite.qlklv.SearchKVLV.openquanlykvlv(SearchKVLV.java:39)
+at automation.testsuite.qlklv.AddKVLV.openquanlykvlv(AddKVLV.java:35)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -74,29 +74,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openquanlykvlv -->
-        <test-method signature="TimKiemKVLV001()[pri:1, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:24:39 GMT+07:00" name="TimKiemKVLV001" finished-at="2024-12-22T14:24:39 GMT+07:00" duration-ms="0" status="SKIP">
+        <test-method signature="Themkvlv001()[pri:1, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:38:17 GMT+07:00" name="Themkvlv001" finished-at="2024-12-22T15:38:17 GMT+07:00" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='test-system.crmstar.vn/work-space-management'] (tried for 50 second(s) with 500 milliseconds interval)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10100, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 46fb4665-96c1-4c87-b28d-ae3a9bfd906e]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15860, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68850b9c-8b24-44c4-b456-ad3ef6e63574]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='test-system.crmstar.vn/work-space-management'] (tried for 50 second(s) with 500 milliseconds interval)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10100, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 46fb4665-96c1-4c87-b28d-ae3a9bfd906e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15860, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68850b9c-8b24-44c4-b456-ad3ef6e63574
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
 at automation.common.CommonBase.getElementPresentDOM(CommonBase.java:102)
 at automation.common.CommonBase.click(CommonBase.java:169)
 at automation.page.QuanlyKLVPage.OpenMenu(QuanlyKLVPage.java:26)
-at automation.testsuite.qlklv.SearchKVLV.openquanlykvlv(SearchKVLV.java:39)
+at automation.testsuite.qlklv.AddKVLV.openquanlykvlv(AddKVLV.java:35)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -132,34 +132,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TimKiemKVLV001 -->
-        <test-method is-config="true" signature="openquanlykvlv()[pri:0, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:24:39 GMT+07:00" name="openquanlykvlv" finished-at="1970-01-01T07:00:00 GMT+07:00" duration-ms="-1734852279193" status="SKIP">
+        </test-method> <!-- Themkvlv001 -->
+        <test-method is-config="true" signature="openquanlykvlv()[pri:0, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:38:17 GMT+07:00" name="openquanlykvlv" finished-at="1970-01-01T07:00:00 GMT+07:00" duration-ms="-1734856697210" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openquanlykvlv -->
-        <test-method signature="TimKiemKVLV002()[pri:2, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:24:39 GMT+07:00" name="TimKiemKVLV002" finished-at="2024-12-22T14:24:39 GMT+07:00" duration-ms="0" status="SKIP">
+        <test-method signature="ThemkvLV002()[pri:2, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:38:17 GMT+07:00" name="ThemkvLV002" finished-at="2024-12-22T15:38:17 GMT+07:00" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='test-system.crmstar.vn/work-space-management'] (tried for 50 second(s) with 500 milliseconds interval)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10100, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 46fb4665-96c1-4c87-b28d-ae3a9bfd906e]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15860, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68850b9c-8b24-44c4-b456-ad3ef6e63574]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@href='test-system.crmstar.vn/work-space-management'] (tried for 50 second(s) with 500 milliseconds interval)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10100, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 46fb4665-96c1-4c87-b28d-ae3a9bfd906e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15860, moz:profile: C:\Users\THUY\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68850b9c-8b24-44c4-b456-ad3ef6e63574
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
 at automation.common.CommonBase.getElementPresentDOM(CommonBase.java:102)
 at automation.common.CommonBase.click(CommonBase.java:169)
 at automation.page.QuanlyKLVPage.OpenMenu(QuanlyKLVPage.java:26)
-at automation.testsuite.qlklv.SearchKVLV.openquanlykvlv(SearchKVLV.java:39)
+at automation.testsuite.qlklv.AddKVLV.openquanlykvlv(AddKVLV.java:35)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -195,12 +195,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TimKiemKVLV002 -->
-        <test-method is-config="true" signature="closeWebPage()[pri:0, instance:automation.testsuite.qlklv.SearchKVLV@8f2ef19]" started-at="2024-12-22T14:24:39 GMT+07:00" name="closeWebPage" finished-at="1970-01-01T07:00:00 GMT+07:00" duration-ms="-1734852279305" status="SKIP">
+        </test-method> <!-- ThemkvLV002 -->
+        <test-method is-config="true" signature="XoaKVLVdathem()[pri:0, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:38:17 GMT+07:00" name="XoaKVLVdathem" finished-at="1970-01-01T07:00:00 GMT+07:00" duration-ms="-1734856697242" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XoaKVLVdathem -->
+        <test-method is-config="true" signature="closeWebPage()[pri:0, instance:automation.testsuite.qlklv.AddKVLV@2cf3d63b]" started-at="2024-12-22T15:38:17 GMT+07:00" name="closeWebPage" finished-at="1970-01-01T07:00:00 GMT+07:00" duration-ms="-1734856697498" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeWebPage -->
-      </class> <!-- automation.testsuite.qlklv.SearchKVLV -->
+      </class> <!-- automation.testsuite.qlklv.AddKVLV -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
