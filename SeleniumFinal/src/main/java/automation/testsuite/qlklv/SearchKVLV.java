@@ -3,7 +3,6 @@ package automation.testsuite.qlklv;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -15,9 +14,13 @@ import automation.constant.Constant_URL;
 import automation.page.LoginPage;
 import automation.page.QuanlyKLVPage;
 
-public class AddKVLV extends CommonBase {
+
+public class SearchKVLV extends CommonBase  {
 	public LoginPage loginPage;
 	public QuanlyKLVPage quanlyKLV;
+
+
+
 	@BeforeSuite
 	public void openFireFox() {
 		driver = initFirefoxDriver(Constant_URL.CODESTARCRM);
@@ -34,32 +37,28 @@ public class AddKVLV extends CommonBase {
 	public void openquanlykvlv() {
 		quanlyKLV.OpenMenu();
 	}
-	
-	@Test(priority = 1)
-	public void Themkvlv001() {
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
-		assertTrue(isElementPresent(CT_Khulamviec.TOAS_SUCCESS));
-	}
 
-	@Test(priority = 2)
-	public void ThemkvLV002() {
-		quanlyKLV.ThemmoiKVLV("KVLV005");
+	@Test(priority = 1)
+	public void TimKiemKVLV001() {
+		quanlyKLV.SearchKVLV("KVLV132");
 		pause(1000);
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
-		assertTrue("Tên phòng ban đã tồn tại".equals(getElementPresentDOM(CT_Khulamviec.LABEL_ERROR).getText()));
+		assertTrue(getElementPresentDOM(CT_Khulamviec.LABEL_NOT_FOUND).isDisplayed());
 	}
 	
-	@AfterTest
-	public void XoaKVLVdathem() {
-		quanlyKLV.OpenMenu();
-		quanlyKLV.DeleteKVLV("KVLV005");
+	/*
+	 * Test này phát hiện ra lỗi
+	 * Khi tìm kiếm có điều kiện sau đó chuyển page thì điều kiện bị mất 
+	 * và kết quả lại là tìm kiếm tất cả. 
+	 */
+	@Test(priority = 2)
+	public void TimKiemKVLV002() {
+		quanlyKLV.SearchKVLV("KVLV132");
+		pause(1000);
+		quanlyKLV.NavigateToLastPage();
 	}
 
 	@AfterSuite
 	public void closeWebPage() {
 		driver.close();
 	}
-
 }

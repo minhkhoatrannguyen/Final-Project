@@ -2,6 +2,7 @@ package automation.testsuite.qlklv;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -10,14 +11,18 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import automation.common.CommonBase;
+import automation.constant.CT_Department;
 import automation.constant.CT_Khulamviec;
 import automation.constant.Constant_URL;
 import automation.page.LoginPage;
 import automation.page.QuanlyKLVPage;
+import automation.page.QuanlyPhongBanPage;
 
-public class AddKVLV extends CommonBase {
+public class ViewKVLV extends CommonBase {
 	public LoginPage loginPage;
 	public QuanlyKLVPage quanlyKLV;
+
+
 	@BeforeSuite
 	public void openFireFox() {
 		driver = initFirefoxDriver(Constant_URL.CODESTARCRM);
@@ -35,24 +40,31 @@ public class AddKVLV extends CommonBase {
 		quanlyKLV.OpenMenu();
 	}
 	
+	/*
+	 * Case này phát hiện lỗi message xác nhận update đang không hiển thị nội dung text.
+	 */
 	@Test(priority = 1)
-	public void Themkvlv001() {
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
-		assertTrue(isElementPresent(CT_Khulamviec.TOAS_SUCCESS));
+	public void XemKVLV001() {
+		quanlyKLV.ViewKVLV("KVLV132");
+		assertTrue(isElementPresent(CT_Khulamviec.LABEL_TITLE_DETAIL_KVLV));
 	}
-
+	
 	@Test(priority = 2)
-	public void ThemkvLV002() {
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
-		assertTrue("Tên phòng ban đã tồn tại".equals(getElementPresentDOM(CT_Khulamviec.LABEL_ERROR).getText()));
+	public void XemPhongBan002() {
+		quanlyKLV.ViewKVLV("KVLV132");
+		click(CT_Khulamviec.BUTTON_CANCEL);
+		Assert.assertTrue(driver.getCurrentUrl().contains("http://test-system.crmstar.vn/work-space-management"));
+	}
+	
+	@Test(priority = 3)
+	public void XemPhongBan003() {
+		quanlyKLV.ViewKVLV("KVLV132");
+		click(CT_Khulamviec.BUTTON_EDIT_KVLV);
+		assertTrue(isElementPresent(CT_Khulamviec.LABEL_TITLE_MODIFY_KVLV));
 	}
 	
 	@AfterTest
-	public void XoaKVLVdathem() {
+	public void XoaKVLVDaThem() {
 		quanlyKLV.OpenMenu();
 		quanlyKLV.DeleteKVLV("KVLV005");
 	}

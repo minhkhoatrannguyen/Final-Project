@@ -10,14 +10,19 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import automation.common.CommonBase;
+import automation.constant.CT_Department;
 import automation.constant.CT_Khulamviec;
 import automation.constant.Constant_URL;
 import automation.page.LoginPage;
 import automation.page.QuanlyKLVPage;
+import automation.page.QuanlyPhongBanPage;
 
-public class AddKVLV extends CommonBase {
+public class UpdateKVLV   extends CommonBase {
+	
 	public LoginPage loginPage;
 	public QuanlyKLVPage quanlyKLV;
+
+
 	@BeforeSuite
 	public void openFireFox() {
 		driver = initFirefoxDriver(Constant_URL.CODESTARCRM);
@@ -31,30 +36,32 @@ public class AddKVLV extends CommonBase {
 	}
 	
 	@BeforeMethod
-	public void openquanlykvlv() {
+	public void openquanlykvlv()  {
 		quanlyKLV.OpenMenu();
+		quanlyKLV.ThemmoiKVLV("KVLV006");
 	}
 	
+	/*
+	 * Case này phát hiện lỗi message xác nhận update đang không hiển thị nội dung text.
+	 */
 	@Test(priority = 1)
-	public void Themkvlv001() {
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
+	public void SuaKVLV001() {
+		quanlyKLV.CapnhatKVLV("KVLV0061","KVLV0061");
 		assertTrue(isElementPresent(CT_Khulamviec.TOAS_SUCCESS));
 	}
-
+	
 	@Test(priority = 2)
-	public void ThemkvLV002() {
-		quanlyKLV.ThemmoiKVLV("KVLV005");
+	public void SuaKVLV002() {
+		quanlyKLV.ThemmoiKVLV("KVLV0062");
+		quanlyKLV.CapnhatKVLV("KVLV0062","KVLV0062");
 		pause(1000);
-		quanlyKLV.ThemmoiKVLV("KVLV005");
-		pause(1000);
-		assertTrue("Tên phòng ban đã tồn tại".equals(getElementPresentDOM(CT_Khulamviec.LABEL_ERROR).getText()));
+		assertTrue("Tên khu vực làm việc đã tồn tại".equals(getElementPresentDOM(CT_Khulamviec.LABEL_ERROR).getText()));
 	}
 	
 	@AfterTest
-	public void XoaKVLVdathem() {
+	public void XoaKVLVDaThem() {
 		quanlyKLV.OpenMenu();
-		quanlyKLV.DeleteKVLV("KVLV005");
+		quanlyKLV.DeleteKVLV("KVLV0062");
 	}
 
 	@AfterSuite
