@@ -52,10 +52,10 @@ public class EditUserTest extends CommonBase {
 		assertEquals((getElementPresentDOM(By.xpath("//label[contains(text(),'Mã người dùng :')]/parent::div//following-sibling::div/label")).getText()),userCode);
 	}
 
-//	@AfterMethod
-//	public void closeWebPage() {
-//		driver.close();
-//	}
+	@AfterMethod
+	public void closeWebPage() {
+		driver.close();
+	}
 
 
 }
