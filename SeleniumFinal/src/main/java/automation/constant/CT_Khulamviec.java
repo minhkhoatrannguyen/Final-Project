@@ -9,7 +9,7 @@ public class CT_Khulamviec {
 	public static String email = "admin@gmail.com";
 	public static String password = "12345678";
 	
-	public static By LINK_KLV_MANAGEMENT = By.xpath("//a[@href='test-system.crmstar.vn/work-space-management']");
+	public static By LINK_KLV_MANAGEMENT = By.xpath("//a[contains(text(),'Quản lý khu làm việc')]");
 	public static By TOAS_SUCCESS = By.xpath("//div[contains(@class , 'toast toast-success')]");
 	
 	// =================== Danh sách khu vực làm việc =================== 

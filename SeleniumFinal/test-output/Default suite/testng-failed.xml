@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.qlklv.AddKVLV">
+      <class name="automation.testsuite.qlklv.ViewAndUpdateKVLV">
         <methods>
-          <include name="closeWebPage"/>
-          <include name="Login"/>
-          <include name="openFireFox"/>
-          <include name="ThemkvLV002"/>
-          <include name="Themkvlv001"/>
+          <include name="XemvaupdateKVLV001"/>
           <include name="openquanlykvlv"/>
-          <include name="XoaKVLVdathem"/>
+          <include name="SuaKVLV001"/>
+          <include name="XemKVLV003"/>
+          <include name="closeWebPage"/>
+          <include name="openFireFox"/>
+          <include name="Login"/>
         </methods>
-      </class> <!-- automation.testsuite.qlklv.AddKVLV -->
+      </class> <!-- automation.testsuite.qlklv.ViewAndUpdateKVLV -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

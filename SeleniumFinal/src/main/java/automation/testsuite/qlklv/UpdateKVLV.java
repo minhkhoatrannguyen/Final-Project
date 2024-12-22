@@ -38,7 +38,7 @@ public class UpdateKVLV   extends CommonBase {
 	@BeforeMethod
 	public void openquanlykvlv()  {
 		quanlyKLV.OpenMenu();
-		quanlyKLV.ThemmoiKVLV("KVLV006");
+		//quanlyKLV.ThemmoiKVLV("KVLV006");
 	}
 	
 	/*

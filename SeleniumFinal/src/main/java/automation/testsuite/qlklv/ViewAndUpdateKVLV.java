@@ -18,7 +18,7 @@ import automation.page.LoginPage;
 import automation.page.QuanlyKLVPage;
 import automation.page.QuanlyPhongBanPage;
 
-public class ViewKVLV extends CommonBase {
+public class ViewAndUpdateKVLV extends CommonBase {
 	public LoginPage loginPage;
 	public QuanlyKLVPage quanlyKLV;
 
@@ -44,31 +44,38 @@ public class ViewKVLV extends CommonBase {
 	 * Case này phát hiện lỗi message xác nhận update đang không hiển thị nội dung text.
 	 */
 	@Test(priority = 1)
-	public void XemKVLV001() {
-		quanlyKLV.ViewKVLV("KVLV132");
+	public void XemvaupdateKVLV001() {
+		quanlyKLV.CapnhatKVLV("KV003455","KVLV132");
 		assertTrue(isElementPresent(CT_Khulamviec.LABEL_TITLE_DETAIL_KVLV));
 	}
 	
 	@Test(priority = 2)
-	public void XemPhongBan002() {
+	public void XemKVLV002() {
 		quanlyKLV.ViewKVLV("KVLV132");
 		click(CT_Khulamviec.BUTTON_CANCEL);
 		Assert.assertTrue(driver.getCurrentUrl().contains("http://test-system.crmstar.vn/work-space-management"));
 	}
 	
 	@Test(priority = 3)
-	public void XemPhongBan003() {
+	public void XemKVLV003() {
 		quanlyKLV.ViewKVLV("KVLV132");
 		click(CT_Khulamviec.BUTTON_EDIT_KVLV);
 		assertTrue(isElementPresent(CT_Khulamviec.LABEL_TITLE_MODIFY_KVLV));
 	}
 	
-	@AfterTest
-	public void XoaKVLVDaThem() {
-		quanlyKLV.OpenMenu();
-		quanlyKLV.DeleteKVLV("KVLV005"
-				+ "");
+	
+	@Test(priority = 4)
+	public void SuaKVLV001() {
+		quanlyKLV.CapnhatKVLV("KV0034555","KVLV1322");
+		assertTrue(isElementPresent(CT_Khulamviec.TOAS_SUCCESS));
 	}
+	
+//	@AfterTest
+//	public void XoaKVLVDaThem() {
+//		quanlyKLV.OpenMenu();
+//		quanlyKLV.DeleteKVLV("KVLV005"
+//				+ "");
+//	}
 
 	@AfterSuite
 	public void closeWebPage() {
